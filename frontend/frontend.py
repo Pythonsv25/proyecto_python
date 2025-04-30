@@ -9,8 +9,8 @@ st.set_page_config(
     layout="wide"
 )
 
-# URL de tu API en Render (¡cambia esto por tu URL real!)
-API_URL = "https://boston-housing-api.onrender.com/predict"  # Reemplaza con tu URL
+
+API_URL = "https://boston-housing-api.onrender.com/predict"
 
 # Título y descripción
 st.title("🏠 Predicción de Precios de Viviendas en Boston")
