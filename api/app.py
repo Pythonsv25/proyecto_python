@@ -47,3 +47,7 @@ def home():
 @app.get("/")
 def home():
     return {"message": "API de predicción activa"}
+
+@app.get("/health")
+def health_check():
+    return {"status": "OK", "timestamp": datetime.now().isoformat()}
