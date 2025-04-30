@@ -24,7 +24,7 @@ class DatosModelo(BaseModel):
     b: float
     lstat: float
 
-@app.post("/predict/")
+@app.post("/predict")
 def predict(data: DatosModelo):
     try:
         X = [[
