@@ -39,3 +39,7 @@ def predict(data: DatosModelo):
         return {"prediction": pred}
     except Exception as e:
         return {"error": str(e)}
+
+@app.get("/")
+def home():
+    return {"message": "API de predicción de precios de Boston Housing"}
