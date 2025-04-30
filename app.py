@@ -43,3 +43,7 @@ def predict(data: DatosModelo):
 @app.get("/")
 def home():
     return {"message": "API de predicción de precios de Boston Housing"}
+
+@app.get("/")
+def home():
+    return {"message": "API de predicción activa"}
