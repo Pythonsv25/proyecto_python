@@ -54,7 +54,7 @@ with st.form("prediction_form"):
 
 # Procesamiento de la predicción
 if submitted:
-    # Prepara los datos para la API
+
     input_data = {
         "zn": float(zn),
         "indus": float(indus),
@@ -73,11 +73,11 @@ if submitted:
             result = response.json()
             prediction = result.get("prediction", 0)
             
-            # Mostrar resultado con estilo
+            
             st.success("### Resultado de la Predicción")
             st.metric(label="**Precio Mediano Estimado**", value=f"${prediction:,.2f} mil")
             
-            # Visualización adicional
+            
             st.divider()
             st.subheader("📊 Datos de Entrada")
             input_df = pd.DataFrame([input_data])
@@ -90,7 +90,7 @@ if submitted:
         st.error(f"Error de conexión: {str(e)}")
         st.info("⚠️ Si la API está en Render Free, puede estar 'dormida'. Espera 20-30 segundos e intenta nuevamente.")
 
-# Footer
+
 st.divider()
 st.markdown("""
 🔍 **Nota:** Este modelo fue entrenado con datos del dataset Boston Housing.
