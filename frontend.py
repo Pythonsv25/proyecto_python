@@ -19,7 +19,7 @@ if submit:
         "ptratio": ptratio, "b": b, "lstat": lstat
     }
     try:
-        respuesta = requests.post("http://localhost:8000/predict/", json=datos)
+        respuesta = requests.post("https://tu-api.onrender.com/predict", json=datos)
         if respuesta.status_code == 200:
             prediccion = respuesta.json()
             st.success(f"Precio estimado: ${prediccion['prediction']:.2f} mil dólares")
